@@ -22,4 +22,4 @@ mongoose.connect(
   () => console.log("connected to db !")
 );
 
-app.listen(4000);
+app.listen(3000);
