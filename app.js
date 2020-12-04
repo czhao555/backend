@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 require("dotenv/config");
 const app = express();
 //import routes
@@ -11,6 +12,7 @@ app.get("/", (req, res) => {
 
 //middleware
 app.use("/posts", postRoute);
+app.use(bodyParser.json());
 
 //connect to db
 mongoose.connect(
@@ -20,4 +22,4 @@ mongoose.connect(
   () => console.log("connected to db !")
 );
 
-app.listen(3000);
+app.listen(4000);

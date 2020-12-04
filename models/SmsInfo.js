@@ -10,7 +10,7 @@ const PostSchema = mongoose.Schema({
     required: true,
   },
   daysPurchased: {
-    type: Date,
+    type: String,
     required: true,
   },
   pharmacyName: {
@@ -31,4 +31,4 @@ const PostSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Posts", PostSchema);
+module.exports = mongoose.model("SmsInfo", PostSchema);
