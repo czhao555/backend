@@ -18,10 +18,10 @@ exports.create = (req, res) => {
 
   // save user in the database
   user
-    .save(user)
+    .save()
     .then((data) => {
-      //res.send(data)
-      res.redirect("/add-user");
+      res.send(data);
+      //res.redirect("/add-user");
     })
     .catch((err) => {
       res.status(500).send({
