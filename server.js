@@ -1,5 +1,7 @@
-const express = require("express");
 const dotenv = require("dotenv");
+dotenv.config({ path: "config.env" });
+const express = require("express");
+
 const morgan = require("morgan");
 const bodyparser = require("body-parser");
 const path = require("path");
@@ -8,9 +10,8 @@ const connectDB = require("./server/database/connection");
 
 const app = express();
 
-dotenv.config({ path: "config.env" });
 const PORT = process.env.PORT || 8080;
-
+console.log(process.env.MONGODB_URI);
 // log requests
 app.use(morgan("tiny"));
 
